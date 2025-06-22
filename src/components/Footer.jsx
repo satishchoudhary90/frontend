@@ -13,7 +13,7 @@ const Footer = () => {
           <span className='text-secondary fw-light'>For giving me this opportunity I learnt a lot new and strenghten my development concepts.</span>
         </div>
         <div className="row">
-          <div className="col-4">
+          <div className="col-10 offset-1 col-md-6 col-lg-4">
             <div className="text-secondary fw-light d-flex flex-column p-2 gap-1">
               <caption >Contact Me</caption>
               <ul style={{fontSize: '1rem', listStyle: 'none'}}>
