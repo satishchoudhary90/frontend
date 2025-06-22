@@ -1,0 +1,7 @@
+.arr:hover{
+ transform : scaleX(1.2);
+}
+.det{
+  text-decoration: none;
+  color: black;
+}

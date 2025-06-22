@@ -1,0 +1,14 @@
+.in:focus{
+  border: none;
+  outline:4px solid rgba(0, 80, 159, 0.36); 
+}
+.in{
+  border: 1px double rgba(0, 80, 159, 0.36);
+  color: rgba(0, 80, 159);
+  background-color:  rgba(233, 237, 241, 0.34);
+}
+.nav{
+  width: 100vw;
+  z-index: 10;
+  background-color:  rgba(233, 237, 241, 0.75);
+}
