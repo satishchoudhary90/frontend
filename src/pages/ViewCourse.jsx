@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { appContext } from "../store/appContext";
-import axios from "axios";
+import api from "../services/api.js";
 import toast from "react-hot-toast";
 import { FaRegTrashAlt } from "react-icons/fa";
 
@@ -42,7 +42,7 @@ const ViewCourse = () => {
 
  async function delIs(id,yr,sem){
   try {
-    const res = await axios.delete(`http://localhost:1000/api/instance/delInstance/${yr}/${sem}/${id}`);
+    const res = await api.delete(`/instance/delInstance/${yr}/${sem}/${id}`);
     if(!res) throw new Error('Instance Not Deleted');
     toast.success(res.data.msg);
     setIs((is)=>{

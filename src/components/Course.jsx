@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import s from './course.module.css'
 import { FaRegTrashAlt } from "react-icons/fa";
 import { appContext } from '../store/appContext';
-import axios from 'axios';
+import api from '../services/api.js';
 import toast from 'react-hot-toast';
 
 const Course = ({course,i}) => {
@@ -10,7 +10,7 @@ const Course = ({course,i}) => {
  async function delCourse(id){
    setLoading(true);
     try {
-      const res = await axios.delete(`http://localhost:1000/api/course/delCourse/${id}`);
+      const res = await api.delete(`/course/delCourse/${id}`);
       if(!res) throw new Error('Course not deleted');
       toast.success(res.data.msg);
     } catch (error) {

@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react'
 import Prerequisite from '../components/Prerequisite'
 import { appContext } from '../store/appContext';
-import axios from 'axios';
+import api from '../services/api.js';
 import toast from 'react-hot-toast';
 
 const AddCoursePage = () => {
@@ -17,7 +17,7 @@ const AddCoursePage = () => {
      setLoading(true);
      try {
       if(!title || !description || !pres) throw new Error('Provide Course Credentials');
-      const res = await axios.post(`http://localhost:1000/api/course/addCourse`, {
+      const res = await api.post(`/course/addCourse`, {
         title,
         description,
         prerequisites: pres

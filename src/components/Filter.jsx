@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { GiSettingsKnobs } from "react-icons/gi";
 import { appContext } from '../store/appContext';
-import axios from 'axios';
+import api from '../services/api.js';
 import toast from 'react-hot-toast';
 
 const Filter = () => {
@@ -12,7 +12,7 @@ const Filter = () => {
   if (!year || !semester) return;
   setLoading(true);
   try {
-    const res = await axios(`http://localhost:1000/api/instance/getCourseSem/${year}/${semester}`);
+    const res = await api.get(`/instance/getCourseSem/${year}/${semester}`);
     const { data } = res;
 
     if (!Array.isArray(data) || data.length === 0) {

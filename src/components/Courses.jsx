@@ -8,6 +8,7 @@ import Filter from "./Filter";
 import Course from "./Course";
 import AddInstance from "./AddInstance";
 import s from './courses.module.css'
+import api from "../services/api.js";
 
 
 const Courses = () => {
@@ -17,7 +18,7 @@ const Courses = () => {
     const fetchCourses = async () => {
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:1000/api/course/allCourses');
+        const res = await api.get('/course/allCourses');
         const data = res.data;
         setCourses(data || []);
         setDisplay(data);
@@ -52,7 +53,7 @@ const Courses = () => {
              <div className={`${s.scroll} row position-relative flex-nowrap overflow-x-scroll gy-3 row-cols-1 row-cols-md-2 row-cols-xl-3`}>
                <>
     {isLoading ? (
-          <div className="col-12 d-flex justify-content-center">
+          <div className="col-* d-flex align-items-center text-center justify-content-center">
             <div className="spinner-border" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>

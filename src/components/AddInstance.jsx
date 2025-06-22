@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { appContext } from '../store/appContext';
 import { useState } from 'react';
-import axios from 'axios';
+import api from '../services/api.js';
 import toast from 'react-hot-toast';
 const AddInstance = () => {
 
@@ -14,7 +14,7 @@ const AddInstance = () => {
   async function submitHandle(e){
     e.preventDefault();
     try {
-       const res = await axios.post(`http://localhost:1000/api/instance/addInstance`,{
+       const res = await api.post(`/instance/addInstance`,{
         course: id,
         year,
         semester
