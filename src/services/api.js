@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:1000/api',  // change this
+  baseURL: 'https://courselisterbackend.onrender.com/api',  // change this
   headers: {
     'Content-Type': 'application/json',
   },
