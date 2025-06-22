@@ -11,7 +11,7 @@ const ViewCourse = () => {
   useEffect(() => {
     async function fetchCourse() {
       try {
-        const res = await axios.get(`http://localhost:1000/api/course/${view.course_id}`);
+        const res = await api.get(`/course/${view.course_id}`);
         if (!res) throw new Error("Internal Server Error");
         setView(res.data);
         toast.success("You Can View Course");
