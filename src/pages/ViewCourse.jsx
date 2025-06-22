@@ -28,7 +28,7 @@ const ViewCourse = () => {
   async function fetchInstances() {
     if (!view?.course_id) return;
     try {
-      const res = await axios.get(`http://localhost:1000/api/instance/allInstance/${view.course_id}`);
+      const res = await api.get(`/instance/allInstance/${view.course_id}`);
       if (!res) throw new Error("Internal Server Error");
       setIs(res.data);
     } catch (error) {
