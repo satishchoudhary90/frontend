@@ -53,7 +53,7 @@ const Courses = () => {
              <div className={`${s.scroll} row position-relative flex-nowrap overflow-x-scroll gy-3 row-cols-1 row-cols-md-2 row-cols-xl-3`}>
                <>
     {isLoading ? (
-          <div className="col-* d-flex align-items-center text-center justify-content-center">
+          <div className="container-fluid p-5 m-5 h-100 w-100 d-flex align-items-center text-center justify-content-center">
             <div className="spinner-border" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
