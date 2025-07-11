@@ -13,7 +13,7 @@ const Navbar = () => {
         <span class="navbar-brand-slogan d-block">Indian Institute of Technology Bombay</span>
       </div>      
     </div>
-    <form class="d-flex justify-content-end pe-4" role="search">
+    <form class="d-none d-md-flex justify-content-end pe-4" role="search">
         <input style={{width: '300px'}} class={`${s.in} text-center py-1 px-3 rounded me-2`} type="search" placeholder="Search Courses ..." aria-label="Search"/>
       </form>
   </div>
